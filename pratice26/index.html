@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>blinkit – Groceries delivered in 8 minutes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <a class="logo" href="#" data-a="home" aria-label="blinkit home"><span class="l1">blink</span><span class="l2">it</span></a>
+  <button class="loc" data-a="open-loc" aria-label="Change delivery location">
+    <strong>Delivery in 8 minutes</strong>
+    <span><span id="addr">Sector 14, Karnal, Haryana</span> ▼</span>
+  </button>
+  <div class="search">
+    <span aria-hidden="true">🔍</span>
+    <input id="search" type="search" placeholder='Search "milk"' autocomplete="off" aria-label="Search products">
+  </div>
+  <button class="btn-login" data-a="open-login" id="loginBtn">Login</button>
+  <button class="btn-cart" data-a="open-cart" id="cartBtn" aria-label="Open cart">🛒 <span id="cartLabel">My Cart</span></button>
+</header>
+
+<main id="main" class="main"></main>
+
+<div class="backdrop" id="backdrop" data-a="close-all"></div>
+
+<aside class="drawer" id="drawer" aria-label="Cart" aria-hidden="true">
+  <div class="drawer-head">
+    <div><h2>My Cart</h2><p>⏱ Delivery in 8 minutes</p></div>
+    <button class="x" data-a="close-all" aria-label="Close cart">✕</button>
+  </div>
+  <div class="drawer-body" id="drawerBody"></div>
+  <div class="drawer-foot" id="drawerFoot"></div>
+</aside>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <div class="modal-box" id="modalBox"></div>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
